@@ -1,0 +1,14 @@
+{
+  "name": "generator-mcgill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew McGill",
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "3.2.0"
+  }
+}
