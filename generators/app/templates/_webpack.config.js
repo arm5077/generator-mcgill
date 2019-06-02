@@ -21,7 +21,7 @@ module.exports = {
   ],
   target: 'web',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: <%_ if (server) { -%> path.resolve(__dirname, 'dist/client') <%_ } else { -%> path.resolve(__dirname, 'dist')<%_ } -%>,
     filename: 'bundle.js'
   },
   plugins: [
@@ -32,7 +32,7 @@ module.exports = {
     }),
     new CopyPlugin([
       <%_ if (server) { -%>
-      { from: './src/server', to: './dist' }
+      { from: './src/server', to: path.resolve(__dirname, 'dist') }
       <%_ } -%>
     ])
   ],
